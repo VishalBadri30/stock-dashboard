@@ -3,7 +3,7 @@ export const convertDateToUnixTimestamp = (date) => {
 };
 
 export const convertUnixTimestampToDate = (unixTimeStamp) => {
-  const milliseconds = unixTimeStamp * 1000;
+  const milliseconds = unixTimeStamp;
   return new Date(milliseconds).toLocaleDateString();
 };
 
@@ -12,4 +12,5 @@ export const createDate = (date, days, weeks, months, years) => {
   newDate.setDate(newDate.getDate() + days + 7 * weeks);
   newDate.setMonth(newDate.getMonth() + months);
   newDate.setFullYear(newDate.getFullYear() + years);
+  return newDate;
 };
