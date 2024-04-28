@@ -15,7 +15,7 @@ const Search = () => {
     setBestMatches([]);
   };
 
-  const updateBestMatches = async () => {
+  const updateBestMatches = async (input) => {
     try {
       if (input) {
         const searchResults = await searchSymbols(input);
@@ -45,6 +45,7 @@ const Search = () => {
         placeholder="Search stock.."
         onChange={(event) => {
           setInput(event.target.value);
+          updateBestMatches(event.target.value);
         }}
         onKeyUp={(e) => {
           if (e.key === "Enter") {

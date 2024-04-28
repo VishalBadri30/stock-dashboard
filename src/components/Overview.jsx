@@ -1,7 +1,13 @@
 import React from "react";
 import Card from "./Card";
 
-const Overview = ({ symbol, price, changePercent, currency, change }) => {
+const Overview = ({
+  symbol = "AMZN",
+  price,
+  changePercent,
+  currency,
+  change,
+}) => {
   return (
     <Card>
       <span className="absolute left-4 top-4 text-neutral-300 text-lg ">

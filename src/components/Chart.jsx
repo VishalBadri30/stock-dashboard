@@ -16,7 +16,7 @@ import StockContext from "../context/StockContext";
 import { createDate, convertUnixTimestampToDate } from "../helpers/datahelpers";
 
 const Chart = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([""]);
   const [filter, setFilter] = useState("1W");
   const { darkMode } = useContext(ThemeContext);
 

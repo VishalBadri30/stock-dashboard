@@ -2,7 +2,7 @@ import React from "react";
 import Search from "./Search";
 import { ThemeIcon } from "./ThemeIcon";
 
-const Header = ({ name }) => {
+const Header = ({ name = "Amazon.com Inc" }) => {
   return (
     <>
       <header className="xl:px-32">
